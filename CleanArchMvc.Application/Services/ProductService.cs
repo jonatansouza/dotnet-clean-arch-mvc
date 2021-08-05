@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CleanArchMvc.Application.Services {
-    class ProductService : IProductService {
+    public class ProductService : IProductService {
         private readonly IProductRepository _repository;
         private readonly IMapper _mapper;
 

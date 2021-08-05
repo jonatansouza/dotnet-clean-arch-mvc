@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CleanArchMvc.Application.Services {
-    class CategoryService : ICategoryService {
+    public class CategoryService : ICategoryService {
         private readonly ICategoryRepository _repository;
         private readonly IMapper _mapper;
 
