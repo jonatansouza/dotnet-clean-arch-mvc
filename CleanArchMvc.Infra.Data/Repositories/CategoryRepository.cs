@@ -22,11 +22,11 @@ namespace CleanArchMvc.Infra.Data.Repositories {
         }
 
         public async Task<Category> GetByIdAsync(int? id) {
-            return await _context.Categories.FindAsync(id);
+            return await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<IEnumerable<Category>> GetCategoriesAsync() {
-            return await _context.Categories.ToListAsync();
+            return await _context.Categories.AsNoTracking().ToListAsync();
         }
 
         public async Task<Category> RemoveAsync(Category category) {
