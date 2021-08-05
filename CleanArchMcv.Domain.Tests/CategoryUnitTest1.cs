@@ -13,14 +13,6 @@ namespace CleanArchMvc.Domain.Tests {
         }
 
         [Fact]
-        public void CreateCategory_NegativeIdValue_DomainExceptionInvalidId() {
-            Action action = () => new Category(-1, "Category Name ");
-            action.Should()
-                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
-                 .WithMessage("Invalid Id value");
-        }
-
-        [Fact]
         public void CreateCategory_ShortNameValue_DomainExceptionShortName() {
             Action action = () => new Category(1, "Ca");
             action.Should()
